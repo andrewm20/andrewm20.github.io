@@ -16081,7 +16081,19 @@ Recall: 0.7231638418079096
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Decision-Trees">Decision Trees<a class="anchor-link" href="#Decision-Trees">&#182;</a></h3>
+<h3 id="Decision-Trees">Decision Trees<a class="anchor-link" href="#Decision-Trees">&#182;</a></h3><p>“In machine learning, a Decision Tree is a supervised learning technique. It is capable of
+working with both classification and regression techniques. It resembles a tree with nodes, as the
+name implies. The amount of criteria determines the branches. It divides data into these branches
+until it reaches a threshold unit. There are root nodes, child nodes, and leaf nodes in a decision
+tree. Random forest is also used for supervised learning, although it has a lot of power. It's quite
+popular. The main distinction is that it does not rely on a single decision. It assembles
+randomized decisions based on many decisions and then creates a final decision depending on
+the majority.”
+(<a href="https://www.upgrad.com/blog/random-forest-vs-decision-tree/#:~:text=A%20decision%20tree%20combines%20some,forest%20model%20needs%20rigorous%20training">https://www.upgrad.com/blog/random-forest-vs-decision-tree/#:~:text=A%20decision%20tree%20combines%20some,forest%20model%20needs%20rigorous%20training</a>)</p>
+<p>The reason we wanted to do a random forest as well is that Random forests tend to offer better
+predictive performance, reduced overfitting, and more reliable feature importance measures
+compared to a single decision tree.</p>
+
 </div>
 </div>
 </div>
@@ -16211,6 +16223,40 @@ jp-needs-light-background
 
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>At first we just did one iteration of the random forest and didn’t have any depth, but we decided
+that for this classification we could do a depth 10 random forest with our n_classifiers set to 100
+Decision Trees to get better accuracy to decipher which email is spam or not and what the best
+feature is.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>At first we just did one iteration of decision trees and didn’t have any depth, but we decided that
+for this classification we could do a depth 10 decision tree to get better accuracy to decipher
+which email is spam or not.
+We wanted to find the Accuracy, Recall, and Precision of the decision tree and our results were
+really good at deciphering which emails were spam and which were not.
+Next we wanted to try and find which split had the best information gain in the decision tree. We
+did this by extracting feature importances, finding the indices of those important features, and
+listing the top 5 best splits within the tree.</p>
+
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
